@@ -1,55 +1,61 @@
 import java.util.Scanner;
+
+import static java.lang.System.*;
+
 public class CTM {
     boolean open = true;
     String operation;
     Scanner in = new Scanner(System.in);
     bankRegister reg = new bankRegister();
-    bankOperations op = new bankOperations();
     bankFlex flex = new bankFlex();
-    String client;
-    int cash;
 
     public void launch(){
         while (open){
-            System.out.print("Введите комманду: ");
+            out.print("Введите команду: ");
             operation = in.nextLine();
             switch (operation){
                 case "reg":
                     reg.Register();
                     break;
                 case "add":
-                    System.out.print("Введите имя счёта: ");
-                    client = in.nextLine();
-                    System.out.print("Введите сумму: ");
-                    cash = in.nextInt();
-                    in.nextLine();
-                    op.addCash(client, cash);
+                    flex.addCash();
                     break;
                 case "claim":
-                    System.out.print("Введите имя счёта: ");
-                    client = in.nextLine();
-                    System.out.print("Введите сумму: ");
-                    cash = in.nextInt();
-                    in.nextLine();
-                    op.claimCash(client, cash);
+                    flex.claimCash();
                     break;
                 case "get":
                     reg.getClients();
                     break;
                 case "getCash":
-                    System.out.print("Введите имя счёта: ");
-                    client = in.nextLine();
-                    op.getCash(client);
+                    flex.getCash();
+                    break;
+                case "move":
+                    flex.moveCash();
                     break;
                 case "help":
-                    System.out.println("claim, add, get, reg, exit");
+                    out.println(
+                            """
+                                    claim -- забрать деньги с счёта,\
+
+                                    add -- пополнить счёт,
+                                    get -- номера счетов,\
+
+                                    getCash -- узнать баланс определённого счёта,\
+
+                                    move -- перевести средства,\
+
+                                    reg -- зарегистрировать счета от 2 до 4,\
+
+                                    exit -- выйти\
+                                    !У других команд не ошибайтесь с цифрами и буквами!"""
+                    );
                     break;
                 case "exit":
-                    System.out.println("Выход...");
+                    out.println("Выход...");
                     open = false;
                     break;
                 default:
-                    System.out.println("при ошибке -- `help`");
+                    out.println("при ошибке -- `help`");
                     break;
             }
         }
