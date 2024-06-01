@@ -5,6 +5,7 @@ public class CTM {
     Scanner in = new Scanner(System.in);
     bankRegister reg = new bankRegister();
     bankOperations op = new bankOperations();
+    bankFlex flex = new bankFlex();
     String client;
     int cash;
 

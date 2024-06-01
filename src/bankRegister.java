@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class bankRegister {
     Scanner in = new Scanner(System.in);
-    bankClients db = new bankClients();
+    bankFlex db = new bankFlex();
     int maxClients;
     int minClients = 2;
 

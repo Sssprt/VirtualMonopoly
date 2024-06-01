@@ -1,4 +1,4 @@
-public class bankClients {
+public class bankFlex {
     Bank bank1;
     Bank bank2;
     Bank bank3;
