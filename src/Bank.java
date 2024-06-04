@@ -1,7 +1,6 @@
 public class Bank {
     String bankClientName;
-    public Bank(String bankClientName){
-        this.bankClientName = bankClientName;
-    }
+    Client cl = new Client();
+    public Bank(String bankClientName){this.bankClientName = bankClientName;}
 
 }

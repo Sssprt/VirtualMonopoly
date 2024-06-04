@@ -1,18 +1,15 @@
-import java.util.Scanner;
-
 import static java.lang.System.*;
 
 public class CTM {
     boolean open = true;
     String operation;
-    Scanner in = new Scanner(System.in);
+    input input = new input();
     bankRegister reg = new bankRegister();
     bankFlex flex = new bankFlex();
 
     public void launch(){
         while (open){
-            out.print("Введите команду: ");
-            operation = in.nextLine();
+            operation = input.getString("Введите команду: ");
             switch (operation){
                 case "reg":
                     reg.Register();
@@ -31,6 +28,9 @@ public class CTM {
                     break;
                 case "move":
                     flex.moveCash();
+                    break;
+                case "getBank":
+                    flex.getBank();
                     break;
                 case "help":
                     out.println(
