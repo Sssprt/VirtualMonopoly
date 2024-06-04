@@ -10,10 +10,10 @@ public class bankRegister {
 
     public void getClients(){
         System.out.println(
-                "Имя и номер 1 счёта: "+ cl1 +" - "+flex.card1+
-                "\nИмя и номер 2 счёта: "+ cl2+" - "+flex.card2+
-                "\nИмя и номер 3 счёта: "+ cl3+" - "+flex.card3+
-                "\nИмя и номер 4 счёта: "+ cl4+" - "+flex.card4
+                "Имя и номер 1 счёта: "+ cl1.name +" - "+flex.card1+
+                "\nИмя и номер 2 счёта: "+ cl2.name+" - "+flex.card2+
+                "\nИмя и номер 3 счёта: "+ cl3.name+" - "+flex.card3+
+                "\nИмя и номер 4 счёта: "+ cl4.name+" - "+flex.card4
         );
     }
 
