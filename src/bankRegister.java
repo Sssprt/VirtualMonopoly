@@ -7,13 +7,16 @@ public class bankRegister {
     Client cl2 = flex.cl2;
     Client cl3 = flex.cl3;
     Client cl4 = flex.cl4;
+    String nan = "Name and number ";
+    String acc = " account: ";
 
     public void getClients(){
         System.out.println(
-                "Имя и номер 1 счёта: "+ cl1.name +" - "+flex.card1+
-                "\nИмя и номер 2 счёта: "+ cl2.name+" - "+flex.card2+
-                "\nИмя и номер 3 счёта: "+ cl3.name+" - "+flex.card3+
-                "\nИмя и номер 4 счёта: "+ cl4.name+" - "+flex.card4
+                nan+1+acc+ cl1.name +" / "+flex.card1+
+                "\n"+nan+2+acc+ cl2.name+" / "+flex.card2+
+                "\n"+nan+3+acc+ cl3.name+" / "+flex.card3+
+                "\n"+nan+4+acc+ cl4.name+" / "+flex.card4+
+                "\nУспешно!"
         );
     }
 

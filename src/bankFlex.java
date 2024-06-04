@@ -160,16 +160,16 @@ public class bankFlex {
         int card = input.getInt("Введите номер счёта: ");
 
         if (card == card1){
-            System.out.println("Баланс счёта с номером: " +cl1.name+ card1 + ": " + cl1.balance);
+            System.out.println("Баланс счёта с номером: " +cl1.getName()+ card1 + ": " + cl1.balance);
         }
         if (card == card2){
-            System.out.println("Баланс счёта с номером: " +cl2.name+ card2 + ": " + cl2.balance);
+            System.out.println("Баланс счёта с номером: " +cl2.getName()+ card2 + ": " + cl2.balance);
         }
         if (card == card3){
-            System.out.println("Баланс счёта с номером: " +cl3.name+ card3 + ": " + cl3.balance);
+            System.out.println("Баланс счёта с номером: " +cl3.getName()+ card3 + ": " + cl3.balance);
         }
         if (card == card4){
-            System.out.println("Баланс счёта с номером: " +cl4.name+ card4 + ": " + cl4.balance);
+            System.out.println("Баланс счёта с номером: " +cl4.getName()+ card4 + ": " + cl4.balance);
         }
     }
 }
