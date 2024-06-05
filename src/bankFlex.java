@@ -13,8 +13,61 @@ public class bankFlex {
 
     int flexBalance = 900000;
 
+    public int randomCash(int cash){
+        return (int) (Math.random() * cash * 2);
+    }
     public void success(){System.out.println("Успешно!");}
-
+    public void casino(){
+        int card = input.getInt("Введите номер счёта: ");
+        int cash = input.getInt("Введите кол-во денег: ");
+        int resCash = 0;
+        switch (card){
+            case card1:
+                cl1.balance-=cash;
+                resCash = randomCash(cash);
+                cl1.balance+=resCash;
+                System.out.println("Вы вложили: "+cash+", вы выиграли: "+resCash);
+                break;
+            case card2:
+                cl2.balance-=cash;
+                resCash = randomCash(cash);
+                cl2.balance+=resCash;
+                System.out.println("Вы вложили: "+cash+", вы выиграли: "+resCash);
+                break;
+            case card3:
+                cl3.balance-=cash;
+                resCash = randomCash(cash);
+                cl3.balance+=resCash;
+                System.out.println("Вы вложили: "+cash+", вы выиграли: "+resCash);
+                break;
+            case card4:
+                cl4.balance-=cash;
+                resCash = randomCash(cash);
+                cl4.balance+=resCash;
+                System.out.println("Вы вложили: "+cash+", вы выиграли: "+resCash);
+                break;
+        }
+    }
+//    public void addStreet(){
+//        int owner = Integer.parseInt(input.getString("Введите номер счёта: "));
+//        Streets name = new Streets();
+//        String streetName = input.getString("Введите имя улицы: ");
+//        switch (owner){
+//            case card1:
+//                cl1.addStreet(name);
+//                break;
+//            case card2:
+//                cl2.addStreet(name);
+//                break;
+//            case card3:
+//                cl3.addStreet(name);
+//                break;
+//            case card4:
+//                cl4.addStreet(name);
+//                break;
+//
+//        }
+//    }
     public void claimCash(){
         int card = input.getInt("Введите номер счёта: ");
         int cash = input.getInt("Введите сумму: ");
@@ -160,16 +213,16 @@ public class bankFlex {
         int card = input.getInt("Введите номер счёта: ");
 
         if (card == card1){
-            System.out.println("Баланс счёта с номером: " +cl1.getName()+ card1 + ": " + cl1.balance);
+            System.out.println("Баланс счёта с номером: " +cl1.getName()+ " " + card1 + ": " + cl1.balance);
         }
         if (card == card2){
-            System.out.println("Баланс счёта с номером: " +cl2.getName()+ card2 + ": " + cl2.balance);
+            System.out.println("Баланс счёта с номером: " +cl2.getName() + " " + card2 + ": " + cl2.balance);
         }
         if (card == card3){
-            System.out.println("Баланс счёта с номером: " +cl3.getName()+ card3 + ": " + cl3.balance);
+            System.out.println("Баланс счёта с номером: " +cl3.getName() + " " + card3 + ": " + cl3.balance);
         }
         if (card == card4){
-            System.out.println("Баланс счёта с номером: " +cl4.getName()+ card4 + ": " + cl4.balance);
+            System.out.println("Баланс счёта с номером: " +cl4.getName() + " " + card4 + ": " + cl4.balance);
         }
     }
 }

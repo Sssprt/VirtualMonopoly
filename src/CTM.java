@@ -32,15 +32,33 @@ public class CTM {
                 case "getBank":
                     flex.getBank();
                     break;
+//                case "getStreet":
+//                    flex.addStreet();
+//                    break;
+                case "casino":
+                    flex.casino();
+                    break;
+                case "getCredit":
+
+                    break;
                 case "help":
                     out.println(
                             """
                                     claim -- забрать деньги с счёта,\
 
-                                    add -- пополнить счёт,
+                                    add -- пополнить счёт,\
+                                    
                                     get -- номера счетов,\
 
                                     getCash -- узнать баланс определённого счёта,\
+                                    
+                                    getBank -- узнать баланс банка,\
+                                    
+                                    getStreet -- узнать какими уицами вледеет счёт,\
+                                    
+                                    casino -- казино,\
+                                    
+                                    getCredit -- взять кредит,\
 
                                     move -- перевести средства,\
 

@@ -1,3 +1,4 @@
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class input {
@@ -10,6 +11,10 @@ public class input {
         System.out.print(prompt);
         return scan.nextInt();
     }
+//    public Streets getStreetName(String prompt){
+//        System.out.print(prompt);
+//        return str;
+//    }
     public boolean getBool(String prompt){
         System.out.print(prompt);
         return scan.nextBoolean();
