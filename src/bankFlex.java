@@ -1,5 +1,17 @@
+import lang.language;
+import lang.ru_ru;
+import lang.en_us;
+
 public class bankFlex {
+    // LANGUAGES
+    String cur_lang_string;
+    language cur_lang;
+    ru_ru ru = new ru_ru();
+    en_us us = new en_us();
+
+    // VARS
     input input = new input();
+    roundWait r = new roundWait();
 
     Client cl1 = new Client();
     Client cl2 = new Client();
@@ -13,13 +25,24 @@ public class bankFlex {
 
     int flexBalance = 900000;
 
+    // Set and get language
+    public void setLang(){
+        cur_lang_string = input.getString(ru.question_lang);
+        if (cur_lang_string.equals("ru")) {
+            cur_lang = ru;
+        }
+    }
+    public String getLang(){
+        return cur_lang_string;
+    }
+    //
     public int randomCash(int cash){
         return (int) (Math.random() * cash * 2);
     }
     public void success(){System.out.println("Успешно!");}
     public void casino(){
-        int card = input.getInt("Введите номер счёта: ");
-        int cash = input.getInt("Введите кол-во денег: ");
+        int card = input.getInt(ru.defPrompt);
+        int cash = input.getInt(ru.cashQ);
         int resCash = 0;
         switch (card){
             case card1:
@@ -48,10 +71,30 @@ public class bankFlex {
                 break;
         }
     }
+    public void credit(){
+        int owner = input.getInt(ru.defPrompt);
+        int cash = input.getInt(ru.cashQCredit);
+        int cashPercent = input.getInt(ru.cshPrcnt);
+        switch (owner){
+            case card1:
+                r.waitR(4);
+                cl1.balance-=cash;
+                break;
+            case card2:
+                cl2.balance-=cash;
+                break;
+            case card3:
+                cl3.balance-=cash;
+                break;
+            case card4:
+                cl4.balance-=cash;
+                break;
+        }
+    }
 //    public void addStreet(){
 //        int owner = Integer.parseInt(input.getString("Введите номер счёта: "));
-//        Streets name = new Streets();
 //        String streetName = input.getString("Введите имя улицы: ");
+//        Street name = new Arbat();
 //        switch (owner){
 //            case card1:
 //                cl1.addStreet(name);
@@ -69,7 +112,7 @@ public class bankFlex {
 //        }
 //    }
     public void claimCash(){
-        int card = input.getInt("Введите номер счёта: ");
+        int card = input.getInt(ru.defPrompt);
         int cash = input.getInt("Введите сумму: ");
 
         if (card == card1){
@@ -119,7 +162,7 @@ public class bankFlex {
         }
     }
     public void moveCash(){
-        int card = input.getInt("Введите номер счёта: ");
+        int card = input.getInt(ru.defPrompt);
         int cardTo = input.getInt("Введите номер счёта куда перевести: ");
         int cash = input.getInt("Введите сумму: ");
 
@@ -210,7 +253,7 @@ public class bankFlex {
     }
     public void getBank(){System.out.println("Баланс банка: "+flexBalance);}
     public void getCash(){
-        int card = input.getInt("Введите номер счёта: ");
+        int card = input.getInt(ru.defPrompt);
 
         if (card == card1){
             System.out.println("Баланс счёта с номером: " +cl1.getName()+ " " + card1 + ": " + cl1.balance);

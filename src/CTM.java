@@ -39,7 +39,7 @@ public class CTM {
                     flex.casino();
                     break;
                 case "getCredit":
-
+                    flex.credit();
                     break;
                 case "help":
                     out.println(
