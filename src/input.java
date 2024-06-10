@@ -1,6 +1,4 @@
-import java.io.InputStreamReader;
 import java.util.Scanner;
-import StreetPack.Street;
 
 public class input {
     Scanner scan = new Scanner(System.in);
