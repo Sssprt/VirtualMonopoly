@@ -1,4 +1,4 @@
-package lang;
+package org.mbt.lang;
 
 public class ru_ru extends language {
     public String question_lang = "Введите язык: ";

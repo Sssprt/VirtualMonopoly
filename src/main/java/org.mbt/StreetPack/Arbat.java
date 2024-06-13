@@ -1,4 +1,4 @@
-package StreetPack;
+package org.mbt.StreetPack;
 
 public class Arbat extends Street{
     public Arbat(){

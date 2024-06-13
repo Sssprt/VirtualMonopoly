@@ -1,3 +1,5 @@
+package org.mbt;
+
 import static java.lang.System.*;
 
 public class CTM {

@@ -1,3 +1,5 @@
+package org.mbt;
+
 import java.util.Scanner;
 
 public class input {

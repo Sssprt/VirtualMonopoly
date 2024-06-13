@@ -1,3 +1,5 @@
+package org.mbt;
+
 public class Bank {
     String bankClientName;
     Client cl = new Client();

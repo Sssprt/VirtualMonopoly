@@ -1,3 +1,5 @@
+package org.mbt;
+
 public class bankRegister {
     input input = new input();
     bankFlex flex = new bankFlex();

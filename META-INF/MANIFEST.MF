@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: Runner
-Class-Path: src/Runner
+Main-Class: org.mbt.Runner
+Class-Path: org.mbt/Runner.java
 

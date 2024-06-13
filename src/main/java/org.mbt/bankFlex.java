@@ -1,6 +1,8 @@
-import lang.language;
-import lang.ru_ru;
-import lang.en_us;
+package org.mbt;
+
+import org.mbt.lang.language;
+import org.mbt.lang.ru_ru;
+import org.mbt.lang.en_us;
 
 public class bankFlex {
     // LANGUAGES

@@ -1,5 +1,7 @@
+package org.mbt;
+
 import java.util.ArrayList;
-import StreetPack.Street;
+import org.mbt.StreetPack.Street;
 
 public class Client {
     String name;
